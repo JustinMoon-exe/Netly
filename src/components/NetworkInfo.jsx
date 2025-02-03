@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FiRefreshCw, FiClipboard, FiMapPin, FiGlobe, FiClock, FiWifi, FiServer } from "react-icons/fi";
+import "@fontsource/nunito"; // Defaults to 400 weight
+import "@fontsource/nunito/700.css"; // Bold
+
+
 
 
 const NetworkInfo = () => {
@@ -42,13 +46,12 @@ const NetworkInfo = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 to-blue-900 flex items-center justify-center p-4">
-            <div className="w-full max-w-4xl bg-white/5 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/10 overflow-hidden transition-all duration-300 hover:shadow-3xl">
+        <div className="min-h-screen w-full bg-gradient-to-br from-slate-900 to-blue-900 flex items-center justify-center p-4">
+            <div className="w-full max-w-4xl bg-white/5 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/10 overflow-hidden">
                 <div className="p-6 border-b border-white/10 flex justify-between items-center">
-                    <h1 className="text-2xl font-bold text-cyan-400">
+                    <h1 className="text-5xl text-cyan-400 ">
                         Netly 
                     </h1>
-                    <h2 className="text-m font-bold text-cyan-400">   a lightweight network dashboard </h2>
                     <button
                         onClick={fetchData}
                         className={`p-2 rounded-lg ${loading ? 'animate-spin' : ''} hover:bg-white/10 transition-colors`}
@@ -123,18 +126,23 @@ const NetworkInfo = () => {
                             <p className="text-white truncate">{networkData.org?.replace('AS', '')}</p>
                         </div>
 
-                        {/* Timezone Card */}
-                        <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
-                            <div className="flex items-center space-x-2 mb-4">
-                                <FiClock className="text-cyan-400 text-xl" />
-                                <h3 className="text-sm font-semibold text-cyan-400">TIMEZONE</h3>
+                        {/* Timezone */}
+                        <div className="p-6 bg-white/10 rounded-xl border border-white/15 hover:bg-white/15 transition-colors">
+                                <div className="flex items-center space-x-2 mb-2">
+                                    <FiClock className="text-cyan-400 text-xl" />
+                                    <h3 className="text-sm font-semibold text-cyan-400">TIMEZONE</h3>
+                                </div>
+                                <p className="text-white">{networkData.timezone}</p>
                             </div>
-                            <p className="text-white">{networkData.timezone}</p>
                         </div>
-                    </div>
-                )}
+                    )}
+
+                    
+                </div>
+                
             </div>
-        </div>
+
+            
     );
 };
 

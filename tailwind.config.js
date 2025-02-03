@@ -4,7 +4,14 @@ module.exports = {
     "./public/index.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'colors': 'background-color, border-color, color, fill, stroke',
+      },
+      fontFamily: {
+        funnel: ["Nunito", "sans-serif"],
+      },
+    }
   },
   plugins: [],
 }
