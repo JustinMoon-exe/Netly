@@ -20,3 +20,5 @@ Netly is a React-based web application built with Vite that provides a user-frie
 *   **ipify.org:** An API for retrieving the public IP address.
 *   **gh-pages:** A package to deploy static content to GitHub Pages.
 
+Link: https://justinmoon-exe.github.io/Netly/
+
