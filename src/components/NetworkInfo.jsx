@@ -168,7 +168,7 @@ const NetworkInfo = () => {
                             </div>
 
                             {/* Name and Class Card */}
-                            <div className="p-6 bg-white/5 rounded-xl border border-white/10">
+                            <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
                                 <div className="flex items-center space-x-2 mb-4">
                                     <FiTerminal className="text-cyan-400 text-xl" />
                                     <h3 className="text-sm font-semibold text-cyan-400">DEVELOPER</h3>
