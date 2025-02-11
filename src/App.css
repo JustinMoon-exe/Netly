@@ -40,3 +40,42 @@
 .read-the-docs {
   color: #888;
 }
+
+@keyframes expand {
+  0% {
+      opacity: 0;
+      transform: scale(0.9); /* Start slightly smaller */
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1); /* Expand to full size */
+  }
+}
+
+@keyframes shrink {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+}
+
+.animate-expand {
+  animation: expand 0.5s forwards;
+}
+
+.animate-shrink {
+  animation: shrink 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+from { opacity: 1; }
+to { opacity: 0; }
+}

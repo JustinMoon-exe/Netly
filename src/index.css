@@ -53,6 +53,8 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+
 button:hover {
   border-color: #646cff;
 }
@@ -60,6 +62,29 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+nbutton {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+
+nbutton:hover {
+  border-color: #646cff;
+}
+nbutton:focus,
+nbutton:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -72,4 +97,43 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@keyframes expand {
+  0% {
+      opacity: 0;
+      transform: scale(0.9); /* Start slightly smaller */
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1); /* Expand to full size */
+  }
+}
+
+@keyframes shrink {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+}
+
+.animate-expand {
+  animation: expand 0.5s forwards;
+}
+
+.animate-shrink {
+  animation: shrink 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+from { opacity: 1; }
+to { opacity: 0; }
 }
