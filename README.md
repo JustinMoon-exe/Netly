@@ -2,6 +2,7 @@
 
 [![Website URL](https://img.shields.io/badge/Website-Live_Demo-brightgreen)](https://netly-dbb77-438128479308.us-central1.run.app/)
 
+[![Technical Doc](https://img.shields.io/badge/Technical_Report-Google_Docs-blue)](https://docs.google.com/document/d/1Fsh0x_QolR3jZNZhVKNxUCEULB3k4aAMNWjtEGeUCYI/edit?usp=sharing)
 ## Project Overview
 
 Netly is a web application designed to provide users with instant insights into their current network information.  It fetches and displays key details such as your public IP address, geographical location, Internet Service Provider (ISP), and timezone in a clean, user-friendly dashboard.
